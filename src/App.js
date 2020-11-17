@@ -1,7 +1,13 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 const App = (props) => {
 	const [count, setCount] = useState(0);
+
+	// Similar to componentDidMount()
+	useEffect(() => console.log('I just mounted!'), []);
+
+	// Similar to componentDidUpdate()
+	useEffect(() => console.log('The counter was updated'));
 
 	return (
 		<div>
